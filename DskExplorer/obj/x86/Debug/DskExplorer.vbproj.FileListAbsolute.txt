@@ -1,0 +1,13 @@
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\obj\x86\Debug\DskExplorer.exe
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\obj\x86\Debug\DskExplorer.xml
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\obj\x86\Debug\DskExplorer.pdb
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\bin\Debug\DskExplorer.exe
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\bin\Debug\DskExplorer.pdb
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\bin\Debug\DskExplorer.xml
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\obj\x86\Debug\DskExplorer.vbprojResolveAssemblyReference.cache
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\obj\x86\Debug\DskExplorer.Configs.resources
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\obj\x86\Debug\DskExplorer.Form1.resources
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\obj\x86\Debug\DskExplorer.Resources.resources
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\obj\x86\Debug\DskExplorer.RemoteDsc.resources
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\obj\x86\Debug\DskExplorer.SetAnyThing.resources
+C:\Users\Timeless\Desktop\net dev\DskExplorer\DskExplorer\obj\x86\Debug\DskExplorer.vbproj.GenerateResource.Cache

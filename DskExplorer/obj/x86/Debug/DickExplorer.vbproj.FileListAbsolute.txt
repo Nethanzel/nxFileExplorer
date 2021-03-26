@@ -1,0 +1,62 @@
+N:\DickExplorer\DickExplorer\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\DickExplorer\DickExplorer\obj\x86\Debug\GenerateResource.read.1.tlog
+N:\DickExplorer\DickExplorer\obj\x86\Debug\GenerateResource.write.1.tlog
+N:\DickExplorer\DickExplorer\bin\Debug\DisckExplorer.exe
+N:\DickExplorer\DickExplorer\bin\Debug\DisckExplorer.pdb
+N:\DickExplorer\DickExplorer\bin\Debug\DisckExplorer.xml
+N:\DickExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.Form1.resources
+N:\DickExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.Resources.resources
+N:\DickExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.exe
+N:\DickExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.xml
+N:\DickExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.pdb
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\bin\Debug\DisckExplorer.exe
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\bin\Debug\DisckExplorer.pdb
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.Configs.resources
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.Form1.resources
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.Resources.resources
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.SetAnyThing.resources
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\obj\x86\Debug\DickExplorer.vbproj.GenerateResource.Cache
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.exe
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.xml
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.pdb
+C:\Users\Nethanzel\Desktop\DisckExplorer\DickExplorer\bin\Debug\DisckExplorer.xml
+N:\Aplicaciones\DisckExplorer\DickExplorer\bin\Debug\DisckExplorer.exe
+N:\Aplicaciones\DisckExplorer\DickExplorer\bin\Debug\DisckExplorer.pdb
+N:\Aplicaciones\DisckExplorer\DickExplorer\bin\Debug\DisckExplorer.xml
+N:\Aplicaciones\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.Configs.resources
+N:\Aplicaciones\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.Form1.resources
+N:\Aplicaciones\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.Resources.resources
+N:\Aplicaciones\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.RemoteDsc.resources
+N:\Aplicaciones\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.SetAnyThing.resources
+N:\Aplicaciones\DisckExplorer\DickExplorer\obj\x86\Debug\DickExplorer.vbproj.GenerateResource.Cache
+N:\Aplicaciones\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.exe
+N:\Aplicaciones\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.xml
+N:\Aplicaciones\DisckExplorer\DickExplorer\obj\x86\Debug\DisckExplorer.pdb
+N:\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.vbproj.GenerateResource.Cache
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.exe
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.xml
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.pdb
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\bin\Debug\DickExplorer.exe
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\bin\Debug\DickExplorer.pdb
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\bin\Debug\DickExplorer.xml
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.vbprojResolveAssemblyReference.cache
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.Configs.resources
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.Form1.resources
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.Resources.resources
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.RemoteDsc.resources
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.SetAnyThing.resources
+F:\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.vbproj.GenerateResource.Cache
+F:\All\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.exe
+F:\All\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.xml
+F:\All\Nexus\Nexus\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DickExplorer.pdb
+N:\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DskExplorer.Configs.resources
+N:\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DskExplorer.Form1.resources
+N:\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DskExplorer.Resources.resources
+N:\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DskExplorer.RemoteDsc.resources
+N:\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DskExplorer.SetAnyThing.resources
+N:\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DskExplorer.xml
+N:\Dev App\DickExplorer\DickExplorer\bin\Debug\DskExplorer.exe
+N:\Dev App\DickExplorer\DickExplorer\bin\Debug\DskExplorer.pdb
+N:\Dev App\DickExplorer\DickExplorer\bin\Debug\DskExplorer.xml
+N:\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DskExplorer.exe
+N:\Dev App\DickExplorer\DickExplorer\obj\x86\Debug\DskExplorer.pdb
