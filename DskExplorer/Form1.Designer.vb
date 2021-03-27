@@ -235,7 +235,7 @@ Partial Class Form1
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.ContextMenuStrip1.ShowItemToolTips = False
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(167, 308)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(167, 286)
         '
         'AbrirToolStripMenuItem
         '
