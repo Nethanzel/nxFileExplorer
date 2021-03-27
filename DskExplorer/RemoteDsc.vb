@@ -1,4 +1,6 @@
-﻿Public Class RemoteDsc
+﻿Imports System.Timers
+
+Public Class RemoteDsc
 
 
 
@@ -56,7 +58,8 @@
 
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Button1.Enabled = False
+        Button1.Visible = False
+        Panel3.Visible = True
 
         For Each Disc As String In IO.Directory.GetDirectories(RemoteRecors)
 
@@ -69,10 +72,20 @@
 
         Next
 
+
+        Dim tmr As New System.Timers.Timer()
+        tmr.Interval = 1000
+        tmr.Enabled = True
+        tmr.Start()
+        AddHandler tmr.Elapsed, AddressOf OnTimedEvent
+        CheckForIllegalCrossThreadCalls = False
+
+    End Sub
+
+    Private Sub OnTimedEvent(ByVal sender As Object, ByVal e As ElapsedEventArgs)
         Dim N As Integer
         Dim D As New IO.DirectoryInfo(RemoteRecors)
-
-
+        DirectCast(sender, Timer).Stop()
 
         If FTP_Conect(TextBox2.Text, TextBox3.Text, TextBox1.Text) = True Then
 
@@ -83,17 +96,14 @@
             IO.File.WriteAllText(RemoteRecors & "Disc-" & N & "/Server", TextBox1.Text)
             IO.File.WriteAllText(RemoteRecors & "Disc-" & N & "/Name", TextBox4.Text)
 
-            MsgBox("Agregado a la lista de unidades remotas.")
+
+            MsgBox("Agregado a la lista de unidades remotas.", MsgBoxStyle.Information)
             Me.Close()
         Else
-
-            MsgBox("La conexión no fue posible.")
-            Button1.Enabled = True
+            Button1.Visible = True
+            Panel3.Visible = False
+            MsgBox("La conexión no fue posible.", MsgBoxStyle.Exclamation)
         End If
-
     End Sub
 
-    Private Sub BackgroundWorker1_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs)
-
-    End Sub
 End Class

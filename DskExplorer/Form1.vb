@@ -1,5 +1,6 @@
 ﻿
 Imports DickExplorer.OwnFiles
+Imports System.Timers
 
 Public Class Form1
 
@@ -148,10 +149,6 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Form1_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-
-
-    End Sub
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'RootUser = IO.File.ReadAllText("N:\Nexus\AppWork\NxDisckExplorer\SDroot")
@@ -540,23 +537,23 @@ Public Class Form1
 
                 If (lviElemento.SubItems(2).Text = "Carpeta de archivos") Then
 
-                    
-                        If RutaActual = Nothing Then
 
-                            RutaActual = lviElemento.ToolTipText
+                    If RutaActual = Nothing Then
+
+                        RutaActual = lviElemento.ToolTipText
 
                     ElseIf RutaActual.EndsWith(":\") Then
 
                         RutaActual = RutaActual & lviElemento.ToolTipText
 
-                        Else
+                    Else
 
-                            RutaActual = RutaActual & "\" & lviElemento.ToolTipText
+                        RutaActual = RutaActual & "\" & lviElemento.ToolTipText
 
-                        End If
+                    End If
 
-                        ListView1.SmallImageList = ImgExtList
-                        ListView1.LargeImageList = ImgExtListBigger
+                    ListView1.SmallImageList = ImgExtList
+                    ListView1.LargeImageList = ImgExtListBigger
 
                     Dim Result As String = AbrirDirectorio(RutaActual, ListView1, ShowHide, TextBox2.Text, True)
 
@@ -1142,7 +1139,7 @@ Public Class Form1
         ListCopy.Clear()
 
         For Each File As ListViewItem In ListView1.SelectedItems
-           
+
             ListCopy.Add(RutaActual & "/" & File.ToolTipText)
         Next
 
@@ -1343,7 +1340,7 @@ Public Class Form1
         End If
     End Sub
 
-   
+
     'Private Sub PictureBox2_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox7.MouseHover, PictureBox6.MouseHover, PictureBox5.MouseHover, PictureBox4.MouseHover, PictureBox2.MouseHover
     '    CType(sender, PictureBox).BackColor = SystmColor
     'End Sub
@@ -1356,9 +1353,49 @@ Public Class Form1
     Private Sub CopiarRutaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CopiarRutaToolStripMenuItem.Click
         Try
             My.Computer.Clipboard.Clear()
-            My.Computer.Clipboard.SetText(RutaActual & "\" & ListView1.SelectedItems(0).Text)
+            My.Computer.Clipboard.SetText(RutaActual & "\" & ListView1.SelectedItems(0).ToolTipText)
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem1.Click
+        Dim deletes As New List(Of String)
+
+        For el = 0 To ListView1.SelectedItems.Count - 1
+            deletes.Add(RutaActual & "\" & ListView1.SelectedItems(el).ToolTipText)
+        Next
+
+        Label8.Visible = True
+        Label8.Text = "Eliminando archivos..."
+
+        If (MsgBox("Confirmar antes de borrar", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Borrar") = MsgBoxResult.Ok) Then
+            For i = 0 To deletes.Count - 1
+                Dim directory As Boolean = My.Computer.FileSystem.DirectoryExists(deletes(i))
+                Dim file As Boolean = My.Computer.FileSystem.FileExists(deletes(i))
+
+                If (file) Then
+                    My.Computer.FileSystem.DeleteFile(deletes(i))
+                ElseIf (directory) Then
+                    My.Computer.FileSystem.DeleteDirectory(deletes(i), FileIO.DeleteDirectoryOption.DeleteAllContents)
+                End If
+            Next
+        End If
+
+        Dim tmr As New System.Timers.Timer()
+        tmr.Interval = 2000
+        tmr.Enabled = True
+        tmr.Start()
+        AddHandler tmr.Elapsed, AddressOf OnTimedEvent
+        CheckForIllegalCrossThreadCalls = False
+
+    End Sub
+
+
+    Private Sub OnTimedEvent(ByVal sender As Object, ByVal e As ElapsedEventArgs)
+        Label8.Visible = False
+        Label8.Text = "Espacio"
+
+        AddHandler ToolStripMenuItem1.Click, AddressOf ToolStripMenuItem2_Click
     End Sub
 End Class

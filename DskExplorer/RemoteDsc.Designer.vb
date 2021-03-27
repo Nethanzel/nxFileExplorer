@@ -26,7 +26,6 @@ Partial Class RemoteDsc
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PnlCrearDir = New System.Windows.Forms.Panel()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -41,11 +40,15 @@ Partial Class RemoteDsc
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlCrearDir.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -82,17 +85,6 @@ Partial Class RemoteDsc
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "X"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(28, 30)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'PnlCrearDir
         '
         Me.PnlCrearDir.BackColor = System.Drawing.Color.WhiteSmoke
@@ -109,7 +101,7 @@ Partial Class RemoteDsc
         Me.PnlCrearDir.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PnlCrearDir.Location = New System.Drawing.Point(1, 0)
         Me.PnlCrearDir.Name = "PnlCrearDir"
-        Me.PnlCrearDir.Size = New System.Drawing.Size(402, 291)
+        Me.PnlCrearDir.Size = New System.Drawing.Size(402, 253)
         Me.PnlCrearDir.TabIndex = 2
         '
         'TextBox4
@@ -137,7 +129,7 @@ Partial Class RemoteDsc
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Location = New System.Drawing.Point(3, 156)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(394, 127)
+        Me.Panel2.Size = New System.Drawing.Size(394, 92)
         Me.Panel2.TabIndex = 6
         '
         'Button1
@@ -161,7 +153,7 @@ Partial Class RemoteDsc
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Location = New System.Drawing.Point(150, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(94, 114)
+        Me.Panel3.Size = New System.Drawing.Size(132, 84)
         Me.Panel3.TabIndex = 8
         Me.Panel3.Visible = False
         '
@@ -169,19 +161,20 @@ Partial Class RemoteDsc
         '
         Me.Label6.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label6.Location = New System.Drawing.Point(0, 94)
+        Me.Label6.Location = New System.Drawing.Point(0, 66)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(94, 20)
+        Me.Label6.Size = New System.Drawing.Size(132, 18)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Conectando..."
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.PictureBox2)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(94, 94)
+        Me.Panel4.Size = New System.Drawing.Size(132, 66)
         Me.Panel4.TabIndex = 0
         '
         'TextBox3
@@ -239,28 +232,53 @@ Partial Class RemoteDsc
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Servidor (URL):"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(28, 30)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox2.Image = Global.DskExplorer.My.Resources.Resources.spinner
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(132, 66)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
         'RemoteDsc
         '
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DimGray
-        Me.ClientSize = New System.Drawing.Size(404, 292)
+        Me.ClientSize = New System.Drawing.Size(404, 254)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PnlCrearDir)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "RemoteDsc"
         Me.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Remote"
-        Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlCrearDir.ResumeLayout(False)
         Me.PnlCrearDir.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -282,4 +300,5 @@ Partial Class RemoteDsc
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
 End Class

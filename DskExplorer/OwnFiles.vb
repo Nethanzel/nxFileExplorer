@@ -57,6 +57,7 @@ Module OwnFiles
     Public TipoList As New List(Of String)
 
     Dim ExtDir As String = ".\Ext"
+    Dim extCount
 
     Sub Load_Ext()
 
@@ -76,6 +77,8 @@ Module OwnFiles
 
             ExtList.Add(ExtName.Substring(Index + 1).ToLower)
             TipoList.Add(ExtName.Remove(Index))
+
+            extCount = Form1.ImgExtList.Images.Count
 
         Next
 
@@ -142,15 +145,56 @@ Module OwnFiles
 
         If Not (Atribb And IO.FileAttributes.Hidden) > 0 Then
 
-            LvElemt = New Windows.Forms.ListViewItem(fNombre, _Tipo(Info.Extension, False))
-            LvElemt.SubItems.Add(fTamano)
-            LvElemt.SubItems.Add(fTipo)
-            LvElemt.SubItems.Add(fCreacion)
+            If (fTipo.ToLower = "imagen") Then
+                Dim Img As Image = Image.FromFile(Route)
 
-            LvElemt.ToolTipText = Info.Name
-            LvElemt.Tag = "Archivo"
+                Form1.ImgExtList.Images.Add(Img)
+                Form1.ImgExtListBigger.Images.Add(Img)
 
-            Return LvElemt
+                Dim pos = Form1.ImgExtListBigger.Images.Count - 1
+
+                LvElemt = New Windows.Forms.ListViewItem(fNombre, pos)
+                LvElemt.SubItems.Add(fTamano)
+                LvElemt.SubItems.Add(fTipo)
+                LvElemt.SubItems.Add(fCreacion)
+
+                LvElemt.ToolTipText = Info.Name
+                LvElemt.Tag = "Archivo"
+
+                Return LvElemt
+
+            ElseIf (fTipo.ToLower = "acceso directo" Or fTipo.ToLower = "ejecutable") Then
+
+                Dim ico As Icon = Icon.ExtractAssociatedIcon(Route)
+
+                Form1.ImgExtList.Images.Add(ico)
+                Form1.ImgExtListBigger.Images.Add(ico)
+
+                Dim pos = Form1.ImgExtListBigger.Images.Count - 1
+
+                LvElemt = New Windows.Forms.ListViewItem(fNombre, pos)
+                LvElemt.SubItems.Add(fTamano)
+                LvElemt.SubItems.Add(fTipo)
+                LvElemt.SubItems.Add(fCreacion)
+
+                LvElemt.ToolTipText = Info.Name
+                LvElemt.Tag = "Archivo"
+
+                Return LvElemt
+
+            Else
+
+                LvElemt = New Windows.Forms.ListViewItem(fNombre, _Tipo(Info.Extension, False))
+                LvElemt.SubItems.Add(fTamano)
+                LvElemt.SubItems.Add(fTipo)
+                LvElemt.SubItems.Add(fCreacion)
+
+                LvElemt.ToolTipText = Info.Name
+                LvElemt.Tag = "Archivo"
+
+                Return LvElemt
+
+            End If
 
         Else
             If hidden = True Then
@@ -233,7 +277,6 @@ Module OwnFiles
         Try
             For Each Carpeta As String In IO.Directory.GetDirectories(Ruta)
 
-              
             Next
 
         Catch ex As Exception
@@ -261,6 +304,11 @@ Module OwnFiles
         Form1.Label2.Visible = False
         List.Items.Clear()
 
+        While extCount < Form1.ImgExtList.Images.Count
+
+            Form1.ImgExtList.Images.RemoveAt(Form1.ImgExtList.Images.Count - 1)
+            Form1.ImgExtListBigger.Images.RemoveAt(Form1.ImgExtListBigger.Images.Count - 1)
+        End While
 
         Try
             For Each Carpeta As String In IO.Directory.GetDirectories(Ruta)
